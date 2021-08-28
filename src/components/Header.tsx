@@ -1,6 +1,11 @@
 import { Flex, Image, Link, IconButton, useMediaQuery } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
-import { RiGithubLine, RiLinkedinFill, RiMailFill } from 'react-icons/ri';
+import {
+  RiGithubLine,
+  RiLinkedinFill,
+  RiMailFill,
+  RiMenu2Fill,
+} from 'react-icons/ri';
 import { ActiveLink } from './ActiveLink';
 
 export function Header(): JSX.Element {
@@ -14,19 +19,24 @@ export function Header(): JSX.Element {
       h="90px"
       bgColor="cGrey.600"
       w="100vw"
-      justify="space-around"
+      justify="space-between"
       maxW={1120}
     >
-      <Flex onClick={() => router.replace('/')}>
-        <Image src="igor-cunha-logo.svg" alt="igor-cunha" />
-      </Flex>
-      {!isMobile && (
+      {!isMobile ? (
         <>
+          <Flex
+            onClick={() => router.replace('/')}
+            _hover={{ cursor: 'pointer' }}
+          >
+            <Image src="igor-cunha-logo.svg" alt="igor-cunha" />
+          </Flex>
           <Flex fontWeight="bold" fontSize="xl">
             <ActiveLink href="/about">
               <Link mr="8">About</Link>
             </ActiveLink>
-            <Link mr="8">Portfolio</Link>
+            <ActiveLink href="/portfolio">
+              <Link mr="8">Portfolio</Link>
+            </ActiveLink>
             <Link>Contact</Link>
           </Flex>
           <Flex color="cPurple.500">
@@ -70,6 +80,23 @@ export function Header(): JSX.Element {
               icon={<RiMailFill />}
             />
           </Flex>
+        </>
+      ) : (
+        <>
+          <Flex
+            onClick={() => router.replace('/')}
+            _hover={{ cursor: 'pointer' }}
+          >
+            <Image src="igor-cunha-logo.svg" alt="igor-cunha" />
+          </Flex>
+          <IconButton
+            bgColor="cGrey.600"
+            _active={{ backgroundColor: 'cGrey.500' }}
+            _hover={{ backgroundColor: 'cGrey.400', cursor: 'pointer' }}
+            fontSize="3xl"
+            aria-label="icon"
+            icon={<RiMenu2Fill />}
+          />
         </>
       )}
     </Flex>
