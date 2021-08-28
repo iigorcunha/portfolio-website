@@ -1,5 +1,4 @@
-import { Flex, Text, Image, Grid, Box, SimpleGrid } from '@chakra-ui/react';
-import { Header } from '../components/Header';
+import { Flex, Text, Image, SimpleGrid } from '@chakra-ui/react';
 
 export default function Home(): JSX.Element {
   return (
@@ -12,8 +11,25 @@ export default function Home(): JSX.Element {
       zIndex={3}
       mt="48px"
       p={8}
+      overflowY="scroll"
+      css={{
+        '&::-webkit-scrollbar': {
+          width: '4px',
+        },
+        '&::-webkit-scrollbar-track': {
+          width: '6px',
+        },
+        '&::-webkit-scrollbar-thumb': {
+          background: '#023047',
+          borderRadius: '24px',
+        },
+      }}
     >
-      <Flex fontSize="3xl" color="white" fontWeight="600">
+      <Flex
+        fontSize={['2xl', '2xl', '2xl', '3xl']}
+        color="white"
+        fontWeight="600"
+      >
         <Text textAlign="justify">
           A self-motivated web developer with 2 years of code experience, also
           5+ years as an IT manager. A passionate developer focused on
@@ -40,8 +56,8 @@ export default function Home(): JSX.Element {
         ]}
       >
         <Flex
-          height={160}
-          width={160}
+          height={['140px', '140px', '140px', '160px']}
+          width={['140px', '140px', '140px', '160px']}
           borderRadius="15px"
           align="center"
           justify="center"
@@ -51,8 +67,8 @@ export default function Home(): JSX.Element {
           <Image src="images/ts-block.svg" />
         </Flex>
         <Flex
-          height={160}
-          width={160}
+          height={['140px', '140px', '140px', '160px']}
+          width={['140px', '140px', '140px', '160px']}
           borderRadius="15px"
           align="center"
           justify="center"
@@ -62,8 +78,8 @@ export default function Home(): JSX.Element {
           <Image src="images/react-native-block.svg" />
         </Flex>
         <Flex
-          height={160}
-          width={160}
+          height={['140px', '140px', '140px', '160px']}
+          width={['140px', '140px', '140px', '160px']}
           borderRadius="15px"
           align="center"
           justify="center"
@@ -73,8 +89,8 @@ export default function Home(): JSX.Element {
           <Image src="images/react-block.svg" />
         </Flex>
         <Flex
-          height={160}
-          width={160}
+          height={['140px', '140px', '140px', '160px']}
+          width={['140px', '140px', '140px', '160px']}
           borderRadius="15px"
           align="center"
           justify="center"
@@ -84,8 +100,8 @@ export default function Home(): JSX.Element {
           <Image src="images/node-block.svg" />
         </Flex>
         <Flex
-          height={160}
-          width={160}
+          height={['140px', '140px', '140px', '160px']}
+          width={['140px', '140px', '140px', '160px']}
           borderRadius="15px"
           align="center"
           justify="center"
@@ -95,8 +111,8 @@ export default function Home(): JSX.Element {
           <Image src="images/postgres-block.svg" />
         </Flex>
         <Flex
-          height={160}
-          width={160}
+          height={['140px', '140px', '140px', '160px']}
+          width={['140px', '140px', '140px', '160px']}
           borderRadius="15px"
           align="center"
           justify="center"
@@ -106,8 +122,8 @@ export default function Home(): JSX.Element {
           <Image src="images/mongo-block.svg" />
         </Flex>
         <Flex
-          height={160}
-          width={160}
+          height={['140px', '140px', '140px', '160px']}
+          width={['140px', '140px', '140px', '160px']}
           borderRadius="15px"
           align="center"
           justify="center"
@@ -117,8 +133,8 @@ export default function Home(): JSX.Element {
           <Image src="images/git-block.svg" />
         </Flex>
         <Flex
-          height={160}
-          width={160}
+          height={['140px', '140px', '140px', '160px']}
+          width={['140px', '140px', '140px', '160px']}
           borderRadius="15px"
           align="center"
           justify="center"
@@ -128,8 +144,8 @@ export default function Home(): JSX.Element {
           <Image src="images/css-block.svg" />
         </Flex>
         <Flex
-          height={160}
-          width={160}
+          height={['140px', '140px', '140px', '160px']}
+          width={['140px', '140px', '140px', '160px']}
           borderRadius="15px"
           align="center"
           justify="center"
@@ -139,8 +155,8 @@ export default function Home(): JSX.Element {
           <Image src="images/html-block.svg" />
         </Flex>
         <Flex
-          height={160}
-          width={160}
+          height={['140px', '140px', '140px', '160px']}
+          width={['140px', '140px', '140px', '160px']}
           borderRadius="15px"
           align="center"
           justify="center"
