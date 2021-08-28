@@ -5,10 +5,12 @@ export default function Home(): JSX.Element {
     <Flex
       maxW={1120}
       height="100%"
+      minH="90vh"
       flexDirection="column"
       align="center"
       justify="space-around"
       p={4}
+      zIndex={3}
     >
       <Flex fontSize="3xl" color="white" fontWeight="600">
         <p>
@@ -21,7 +23,7 @@ export default function Home(): JSX.Element {
         </p>
       </Flex>
 
-      <Image src="images/coding.svg" alt="coding" zIndex={2} bottom="60px" />
+      <Image src="images/coding.svg" alt="coding" zIndex={2} bottom="0" />
     </Flex>
   );
 }
