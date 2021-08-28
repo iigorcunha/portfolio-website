@@ -1,33 +1,38 @@
+import Head from 'next/head';
 import { AppProps } from 'next/app';
-import { ChakraProvider, Flex } from '@chakra-ui/react';
+import { ChakraProvider, Flex, Box } from '@chakra-ui/react';
 import { theme } from '../styles/theme';
 import { Header } from '../components/Header';
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
-    <ChakraProvider theme={theme}>
-      <Flex
-        pos="relative"
-        flexDirection="column"
-        align="center"
-        bgColor="cGrey.600"
-        minH="100vh"
-        h="100%"
-      >
-        <Header />
-        <Component {...pageProps} />
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+      <ChakraProvider theme={theme}>
         <Flex
-          bgSize="cover"
-          height="60%"
-          width="100%"
-          bgImage="url('/images/bg.svg')"
-          bgPos="bottom"
-          position="absolute"
-          bottom="0"
-          bgRepeat="no-repeat"
-        />
-      </Flex>
-    </ChakraProvider>
+          flexDirection="column"
+          align="center"
+          bgColor="cGrey.600"
+          h="100%"
+          minH="100vh"
+          position="relative"
+        >
+          <Header />
+          <Component {...pageProps} />
+          <Box
+            position="absolute"
+            bgImage="url('/images/bg-wave.svg')"
+            height="60%"
+            w="100%"
+            bgRepeat="no-repeat"
+            bgSize="cover"
+            bottom="0"
+          />
+        </Flex>
+      </ChakraProvider>
+    </>
   );
 }
 
