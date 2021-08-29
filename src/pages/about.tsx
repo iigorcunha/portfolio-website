@@ -1,4 +1,5 @@
 import { Flex, Text, Image, SimpleGrid } from '@chakra-ui/react';
+import { SkillBlock } from '../components/SkillBlock';
 
 export default function Home(): JSX.Element {
   return (
@@ -55,116 +56,36 @@ export default function Home(): JSX.Element {
           'repeat(5, 1fr)',
         ]}
       >
-        <Flex
-          height={['140px', '140px', '140px', '160px']}
-          width={['140px', '140px', '140px', '160px']}
-          borderRadius="15px"
-          align="center"
-          justify="center"
-          bgColor="cGrey.600"
-          boxShadow="6px 6px 30px #00000040"
-        >
+        <SkillBlock skillName="Typescript" color="#007ACC">
           <Image src="images/ts-block.svg" />
-        </Flex>
-        <Flex
-          height={['140px', '140px', '140px', '160px']}
-          width={['140px', '140px', '140px', '160px']}
-          borderRadius="15px"
-          align="center"
-          justify="center"
-          bgColor="cGrey.600"
-          boxShadow="6px 6px 30px #00000040"
-        >
+        </SkillBlock>
+        <SkillBlock skillName="React Native" color="#61DAFB">
           <Image src="images/react-native-block.svg" />
-        </Flex>
-        <Flex
-          height={['140px', '140px', '140px', '160px']}
-          width={['140px', '140px', '140px', '160px']}
-          borderRadius="15px"
-          align="center"
-          justify="center"
-          bgColor="cGrey.600"
-          boxShadow="6px 6px 30px #00000040"
-        >
+        </SkillBlock>
+        <SkillBlock skillName="React" color="#6398D7">
           <Image src="images/react-block.svg" />
-        </Flex>
-        <Flex
-          height={['140px', '140px', '140px', '160px']}
-          width={['140px', '140px', '140px', '160px']}
-          borderRadius="15px"
-          align="center"
-          justify="center"
-          bgColor="cGrey.600"
-          boxShadow="6px 6px 30px #00000040"
-        >
+        </SkillBlock>
+        <SkillBlock skillName="NodeJS" color="#8CC84B">
           <Image src="images/node-block.svg" />
-        </Flex>
-        <Flex
-          height={['140px', '140px', '140px', '160px']}
-          width={['140px', '140px', '140px', '160px']}
-          borderRadius="15px"
-          align="center"
-          justify="center"
-          bgColor="cGrey.600"
-          boxShadow="6px 6px 30px #00000040"
-        >
+        </SkillBlock>
+        <SkillBlock skillName="PostgreSQL" color="#336791" isDark>
           <Image src="images/postgres-block.svg" />
-        </Flex>
-        <Flex
-          height={['140px', '140px', '140px', '160px']}
-          width={['140px', '140px', '140px', '160px']}
-          borderRadius="15px"
-          align="center"
-          justify="center"
-          bgColor="cGrey.600"
-          boxShadow="6px 6px 30px #00000040"
-        >
+        </SkillBlock>
+        <SkillBlock skillName="MongoDB" color="#6CAC48">
           <Image src="images/mongo-block.svg" />
-        </Flex>
-        <Flex
-          height={['140px', '140px', '140px', '160px']}
-          width={['140px', '140px', '140px', '160px']}
-          borderRadius="15px"
-          align="center"
-          justify="center"
-          bgColor="cGrey.600"
-          boxShadow="6px 6px 30px #00000040"
-        >
+        </SkillBlock>
+        <SkillBlock skillName="Git" color="#DE4C36">
           <Image src="images/git-block.svg" />
-        </Flex>
-        <Flex
-          height={['140px', '140px', '140px', '160px']}
-          width={['140px', '140px', '140px', '160px']}
-          borderRadius="15px"
-          align="center"
-          justify="center"
-          bgColor="cGrey.600"
-          boxShadow="6px 6px 30px #00000040"
-        >
+        </SkillBlock>
+        <SkillBlock skillName="CSS" color="#1C88C7">
           <Image src="images/css-block.svg" />
-        </Flex>
-        <Flex
-          height={['140px', '140px', '140px', '160px']}
-          width={['140px', '140px', '140px', '160px']}
-          borderRadius="15px"
-          align="center"
-          justify="center"
-          bgColor="cGrey.600"
-          boxShadow="6px 6px 30px #00000040"
-        >
+        </SkillBlock>
+        <SkillBlock skillName="HTML" color="#EF652A">
           <Image src="images/html-block.svg" />
-        </Flex>
-        <Flex
-          height={['140px', '140px', '140px', '160px']}
-          width={['140px', '140px', '140px', '160px']}
-          borderRadius="15px"
-          align="center"
-          justify="center"
-          bgColor="cGrey.600"
-          boxShadow="6px 6px 30px #00000040"
-        >
+        </SkillBlock>
+        <SkillBlock skillName="JavaScript" color="#F7DF1E">
           <Image src="images/javascript-block.svg" />
-        </Flex>
+        </SkillBlock>
       </SimpleGrid>
     </Flex>
   );

@@ -1,5 +1,13 @@
-import { Flex, Image, Link, IconButton, useMediaQuery } from '@chakra-ui/react';
+import {
+  Flex,
+  Image,
+  Link,
+  IconButton,
+  useMediaQuery,
+  useDisclosure,
+} from '@chakra-ui/react';
 import { useRouter } from 'next/router';
+import { useRef } from 'react';
 import {
   RiGithubLine,
   RiLinkedinFill,
@@ -7,10 +15,13 @@ import {
   RiMenu2Fill,
 } from 'react-icons/ri';
 import { ActiveLink } from './ActiveLink';
+import { MenuDrawer } from './MenuDrawer';
 
 export function Header(): JSX.Element {
   const [isMobile] = useMediaQuery('(max-width: 768px)');
   const router = useRouter();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = useRef();
   return (
     <Flex
       color="white"
@@ -90,13 +101,18 @@ export function Header(): JSX.Element {
             <Image src="igor-cunha-logo.svg" alt="igor-cunha" />
           </Flex>
           <IconButton
+            onClick={onOpen}
+            ref={btnRef}
             bgColor="cGrey.600"
             _active={{ backgroundColor: 'cGrey.500' }}
             _hover={{ backgroundColor: 'cGrey.400', cursor: 'pointer' }}
             fontSize="3xl"
             aria-label="icon"
+            _focus={{ outline: 'none' }}
+            _focusVisible={{ outline: 'none' }}
             icon={<RiMenu2Fill />}
           />
+          <MenuDrawer isOpen={isOpen} onClose={onClose} btnRef={btnRef} />
         </>
       )}
     </Flex>
