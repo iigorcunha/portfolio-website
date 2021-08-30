@@ -48,7 +48,6 @@ export function Header(): JSX.Element {
             <ActiveLink href="/portfolio">
               <Link mr="8">Portfolio</Link>
             </ActiveLink>
-            <Link>Contact</Link>
           </Flex>
           <Flex color="cPurple.500">
             <IconButton
@@ -100,18 +99,62 @@ export function Header(): JSX.Element {
           >
             <Image src="igor-cunha-logo.svg" alt="igor-cunha" />
           </Flex>
-          <IconButton
-            onClick={onOpen}
-            ref={btnRef}
-            bgColor="cGrey.600"
-            _active={{ backgroundColor: 'cGrey.500' }}
-            _hover={{ backgroundColor: 'cGrey.400', cursor: 'pointer' }}
-            fontSize="3xl"
-            aria-label="icon"
-            _focus={{ outline: 'none' }}
-            _focusVisible={{ outline: 'none' }}
-            icon={<RiMenu2Fill />}
-          />
+
+          <Flex>
+            <Flex mr={8} color="cPurple.500">
+              <IconButton
+                as="a"
+                _active={{ backgroundColor: 'cGrey.500' }}
+                _hover={{ backgroundColor: 'cGrey.400', cursor: 'pointer' }}
+                mr="2"
+                bgColor="cGrey.600"
+                aria-label="github"
+                padding="0"
+                outline="none"
+                href="https://github.com/iigorcunha"
+                target="_blank"
+                fontSize="3xl"
+                icon={<RiGithubLine />}
+              />
+              <IconButton
+                as="a"
+                _active={{ backgroundColor: 'cGrey.500' }}
+                _hover={{ backgroundColor: 'cGrey.400', cursor: 'pointer' }}
+                mr="2"
+                bgColor="cGrey.600"
+                aria-label="github"
+                outline={0}
+                p={0}
+                href="https://linkedin.com/in/iigorcunha"
+                target="_blank"
+                fontSize="3xl"
+                icon={<RiLinkedinFill />}
+              />
+              <IconButton
+                as="a"
+                _active={{ backgroundColor: 'cGrey.500' }}
+                _hover={{ backgroundColor: 'cGrey.400', cursor: 'pointer' }}
+                bgColor="cGrey.600"
+                aria-label="github"
+                href="mailto:igorcesarcunha@gmail.com"
+                p={0}
+                fontSize="3xl"
+                icon={<RiMailFill />}
+              />
+            </Flex>
+            <IconButton
+              onClick={onOpen}
+              ref={btnRef}
+              bgColor="cGrey.600"
+              _active={{ backgroundColor: 'cGrey.500' }}
+              _hover={{ backgroundColor: 'cGrey.400', cursor: 'pointer' }}
+              fontSize="3xl"
+              aria-label="icon"
+              _focus={{ outline: 'none' }}
+              _focusVisible={{ outline: 'none' }}
+              icon={<RiMenu2Fill />}
+            />
+          </Flex>
           <MenuDrawer isOpen={isOpen} onClose={onClose} btnRef={btnRef} />
         </>
       )}
